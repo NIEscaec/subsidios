@@ -27,7 +27,7 @@ The goal of subsidios is to ...
 You can install the released version of subsidios from [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
-install.packages("subsidios")
+install.packages("subsidios2")
 ```
 
 ## Example
