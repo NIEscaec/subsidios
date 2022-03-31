@@ -9,7 +9,7 @@
 #' 
 #' @noRd
 app_sys <- function(...){
-  system.file(..., package = "subsidios")
+  system.file(..., package = "subsidios2")
 }
 
 
