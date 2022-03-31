@@ -7,13 +7,13 @@ retirar_lista_paises <- c("Não Definido", "Provisão de Navios e Aeronaves", "B
                           "Organizações Internacionais", "Mayotte", "Guam", "São Bartolomeu",
                           "Lebuan, Ilhas", "Bouvet, Ilha", "Brasil", "Antártica", "Madagascar")
 
-lista_paises <- unique(comerciobr::sh1_df$no_pais)
+lista_paises <- unique(comerciobr2::sh1_df$no_pais)
 lista_paises_filtrada <- lista_paises[! lista_paises %in% retirar_lista_paises]
 
 
 # barao::relatorio_brasil_pais("China")
 
-purrr::walk(lista_paises_filtrada, barao::relatorio_brasil_pais)
+purrr::walk(lista_paises_filtrada, barao2::relatorio_brasil_pais)
 # 
 # # base de dados comtrade
 # 
@@ -23,7 +23,7 @@ purrr::walk(lista_paises_filtrada, barao::relatorio_brasil_pais)
 # 
 # # Lendo a base de dados COMTRADE
 # 
-lista_paises_comtrade <- comerciomundo::dic_comtrade_mdic
+lista_paises_comtrade <- comerciomundo2::dic_comtrade_mdic
 
 # exp_imp_sh2 <- map_df(here("input", "Comtrade", "arquivos_filtrados", paths_arquivos_filtrados), read_csv)
 # 
@@ -52,5 +52,5 @@ lista_paises_comtrade_filtrada <- lista_paises_comtrade %>%
   dplyr::filter(stringr::str_detect(text, ", nes$", negate = T)) %>% 
   dplyr::pull(text)
 
-purrr::walk(lista_paises_comtrade_filtrada, barao::relatorio_pais_mundo)
+purrr::walk(lista_paises_comtrade_filtrada, barao2::relatorio_pais_mundo)
 
