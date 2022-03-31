@@ -15,9 +15,9 @@
 
 ## Dependencies ----
 ## Add one line by package you want to add as dependency
-usethis::use_dev_package("comerciobr")
-usethis::use_dev_package("comerciomundo")
-usethis::use_dev_package("barao")
+usethis::use_dev_package("comerciobr2")
+usethis::use_dev_package("comerciomundo2")
+usethis::use_dev_package("barao2")
 ## Add modules ----
 ## Create a module infrastructure in R/
 golem::add_module( name = "name_of_module1" ) # Name of the module
@@ -45,7 +45,7 @@ usethis::use_test( "app" )
 # Documentation
 
 ## Vignette ----
-usethis::use_vignette("subsidios")
+usethis::use_vignette("subsidios2")
 devtools::build_vignettes()
 
 ## Code Coverage----
