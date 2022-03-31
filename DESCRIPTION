@@ -29,7 +29,7 @@ Imports:
     lubridate,
     golem,
     gert,
-    comerciobr (>= 0.1.0)
+    comerciobr2 (>= 0.1.0)
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1
@@ -38,9 +38,9 @@ Suggests:
 Config/testthat/edition: 3
 Language: en-US
 Remotes:  
-    fernandobastosneto/barao,
-    fernandobastosneto/subsidios,
+    NIEscaec/barao2,
+    NIEscaec/subsidios2,
     rstudio/shiny,
-    fernandobastosneto/comerciobr
-URL: https://github.com/fernandobastosneto/subsidios
-BugReports: https://github.com/fernandobastosneto/subsidios/issues
+    NIEscaec/comerciobr2
+URL: https://github.com/NIEscaec/subsidios2
+BugReports: https://github.com/NIEscaec/subsidios2/issues
