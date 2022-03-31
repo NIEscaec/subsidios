@@ -6,7 +6,7 @@
 #' @noRd
 #' 
 
-library(barao)
+library(barao2)
 
 comtrade_files <- fs::dir_ls(here::here("data", "relatorios_comerciomundo")) %>% 
   stringr::str_remove(paste0(here::here("data", "relatorios_comerciomundo/"), "comerciomundo_")) %>%
@@ -78,7 +78,7 @@ golem_add_external_resources <- function(){
     favicon(),
     bundle_resources(
       path = app_sys('app/www'),
-      app_title = 'subsidios'
+      app_title = 'subsidios2'
     )
     # Add here other external resources
     # for example, you can add shinyalert::useShinyalert() 
