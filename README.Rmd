@@ -1,56 +1,41 @@
----
-output: github_document
----
+#Subsídios
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
+##Sobre o projeto 
+  O projeto Subsídios é um projeto o qual disponibiliza os relatórios econômicos automatizados. O projeto utiliza dados públicos de comércio do Ministério da Economia e da Onu, também indicadores macroeconômicos publicados pelo Banco Mundial. 
+  
+##Iniciando 
+  Seguem as instruções de como atualizar e gerar os relatórios do comerciobr e comerciomundo. 
+  
+##Requisitos 
+   Bibliotecas as quais são necessárias para o funcionamento das funções nos gráficos.
+   *Observação: Lembrar SEMPRE de conferir pelo menos UM relatório para confirmar se todas as funções estão se portanto normalmente.
+   
+   install.packages("devtools")
 
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "man/figures/README-",
-  out.width = "100%"
-)
-```
-
-# subsidios
-
-<!-- badges: start -->
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
-[![R-CMD-check](https://github.com/NIEscaec/subsidios2/workflows/R-CMD-check/badge.svg)](https://github.com/NIEscaec/subsidios2/actions)
-<!-- badges: end -->
-
-The goal of subsidios is to ...
-
-## Installation
-
-You can install the released version of subsidios from [CRAN](https://CRAN.R-project.org) with:
-
-``` r
-install.packages("subsidios2")
-```
-
-## Example
-
-This is a basic example which shows you how to solve a common problem:
-
-```{r example}
-library(subsidios)
-## basic example code
-```
-
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
-
-```{r cars}
-summary(cars)
-```
-
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this. You could also use GitHub Actions to re-render `README.Rmd` every time you push. An example workflow can be found here: <https://github.com/r-lib/actions/tree/master/examples>.
-
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
+##Instalação 
+  O projeto Subsídios tem como pré-requisito 3 projetos a parte presentes no github da Secretaria de Comércio e Assuntos Econômicos.
+  *devtools::install_github("NIEscaec/barao2")
+  *devtools::install_github("NIEscaec/comerciobr2")
+    > A atualização dos dados do comerciobr se consiste em :
+      Abrir o projeto comerciobr.Rproj na pasta do comerciobr2;
+      Na pasta data-raw, abrir o arquivo comextat_dados.R;
+      Rodar TODO o código presente no comextar_dados.R e aguardar ele instalar novamente o pacote. 
+      Caso haja dúvida se os dados estão atualizados, deve se dirigir ao projeto barão e rodar a função comerciobr_get_ultimomes()
+  *devtools::install_github("NIEscaec/comerciomundo2")
+  
+##Execução
+  Para a execução de todos os relatórios (depois da certeza de que os sub-projetos : barão, comerciobr e comerciomundo) estão atualizados o usuário deve:
+    > Se dirigir a pasta Subsídios
+      Abrir o projeto subsidios.Rpoj 
+      Na pasta data-raw dentro do subsídios o usuário deve rodar o código do Relatorios.R 
+      ATENÇÃO!!! - 
+      Para rodar APENAS os relatórios do comerciobr, rodar o código até o comando "purrr::walk(lista_paises_filtrada, barao2::relatorio_brasil_pais" na linha 16;
+      Para rodar APENAS os relatórios do comerciomundo, rodar apenas o código a partir da linha 17 até o final do código na linha 55.
+     
+ ##Visualização 
+  Depois de seguir os passos indicados anteriormente, o usuário deve se dirigir a pasta data dentro do projeto subsídios;
+  Dentro da pasta data existem duas pastas referentes ao comerciobr e o comerciomundo os quais estão presentes os relatórios de todos os países em suas respectivas pastas 
+  
+  
+ 
+  
