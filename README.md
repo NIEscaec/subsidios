@@ -7,15 +7,13 @@
   
 ###Iniciando 
   Seguem as instruções de como atualizar e gerar os relatórios do comerciobr e comerciomundo. 
-  
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ###Requisitos 
    Bibliotecas as quais são necessárias para o funcionamento das funções nos gráficos.
    *Observação: Lembrar SEMPRE de conferir pelo menos UM relatório para confirmar se todas as funções estão se portanto normalmente.
    
    install.packages("devtools")
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 ###Instalação 
   O projeto Subsídios tem como pré-requisito 3 projetos a parte presentes no github da Secretaria de Comércio e Assuntos Econômicos.
   *devtools::install_github("NIEscaec/barao2")
@@ -27,9 +25,8 @@
       Caso haja dúvida se os dados estão atualizados, deve se dirigir ao projeto barão e rodar a função comerciobr_get_ultimomes()
   *devtools::install_github("NIEscaec/comerciomundo2")
   
-  <p align="right">(<a href="#readme-top">back to top</a>)</p>
-  
-<!-- Execução --!>
+<!-- Execução -->
+
 ###Execução
   Para a execução de todos os relatórios (depois da certeza de que os sub-projetos : barão, comerciobr e comerciomundo) estão atualizados o usuário deve:
     > Se dirigir a pasta Subsídios
@@ -38,11 +35,9 @@
       ATENÇÃO!!! - 
       Para rodar APENAS os relatórios do comerciobr, rodar o código até o comando "purrr::walk(lista_paises_filtrada, barao2::relatorio_brasil_pais" na linha 16;
       Para rodar APENAS os relatórios do comerciomundo, rodar apenas o código a partir da linha 17 até o final do código na linha 55.
-  <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
  ###Visualização 
   Depois de seguir os passos indicados anteriormente, o usuário deve se dirigir a pasta data dentro do projeto subsídios;
   Dentro da pasta data existem duas pastas referentes ao comerciobr e o comerciomundo os quais estão presentes os relatórios de todos os países em suas respectivas pastas 
-  
-  <p align="right">(<a href="#readme-top">back to top</a>)</p>
- 
+
   
