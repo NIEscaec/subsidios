@@ -1,5 +1,7 @@
 #Subsídios
 
+
+<!-- Sobre o projeto -->
 ##Sobre o projeto 
   O projeto Subsídios é um projeto o qual disponibiliza os relatórios econômicos automatizados. O projeto utiliza dados públicos de comércio do Ministério da Economia e da Onu, também indicadores macroeconômicos publicados pelo Banco Mundial. 
   
@@ -23,6 +25,8 @@
       Caso haja dúvida se os dados estão atualizados, deve se dirigir ao projeto barão e rodar a função comerciobr_get_ultimomes()
   *devtools::install_github("NIEscaec/comerciomundo2")
   
+  
+<!-- Execução --!>
 ##Execução
   Para a execução de todos os relatórios (depois da certeza de que os sub-projetos : barão, comerciobr e comerciomundo) estão atualizados o usuário deve:
     > Se dirigir a pasta Subsídios
