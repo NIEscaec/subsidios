@@ -38,5 +38,10 @@
  ## Visualização 
   Depois de seguir os passos indicados anteriormente, o usuário deve se dirigir a pasta data dentro do projeto subsídios;
   Dentro da pasta data existem duas pastas referentes ao comerciobr e o comerciomundo os quais estão presentes os relatórios de todos os países em suas respectivas pastas 
+  
+ ## Autores
+
+| [<img src="https://avatars.githubusercontent.com/u/37356058?v=4" width=115><br><sub>Fernando Bastos Neto</sub>](https://github.com/fernandobastosneto) |  [<img src="https://avatars.githubusercontent.com/u/30351153?v=4" width=115><br><sub>Henrique Towata Sato</sub>](https://github.com/HenriqueSato) |  [<img src="https://avatars.githubusercontent.com/u/8989346?v=4" width=115><br><sub>Laura Vieira Fernandes</sub>](https://github.com/l2v6f) |   [<img src="https://avatars.githubusercontent.com/u/8989346?v=4" width=115><br><sub>Claudio Marconi</sub>](https://github.com/l2v6f) |  [<img src="https://avatars.githubusercontent.com/u/8989346?v=4" width=115><br><sub>Paulo Victor</sub>](https://github.com/costapaulovictor) |   [<img src="https://avatars.githubusercontent.com/u/8989346?v=4" width=115><br><sub>Samuel Magalhães </sub>](https://github.com/samuelitamaraty) |
+| :---: | :---: | :---: |
 
   
