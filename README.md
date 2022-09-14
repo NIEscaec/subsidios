@@ -14,7 +14,7 @@
    install.packages("devtools")
 
 ## Instalação 
-  O projeto Subsídios tem como pré-requisito 3 projetos a parte presentes no github da Secretaria de Comércio e Assuntos Econômicos.
+   O projeto Subsídios tem como pré-requisito 3 projetos a parte presentes no github da Secretaria de Comércio e Assuntos Econômicos.
   *devtools::install_github("NIEscaec/barao2")
   *devtools::install_github("NIEscaec/comerciobr2")
     - A atualização dos dados do comerciobr se consiste em :
@@ -27,7 +27,7 @@
 <!-- Execução -->
 
 ## Execução
-  Para a execução de todos os relatórios (depois da certeza de que os sub-projetos : barão, comerciobr e comerciomundo) estão atualizados o usuário deve:
+   Para a execução de todos os relatórios (depois da certeza de que os sub-projetos : barão, comerciobr e comerciomundo) estão atualizados o usuário deve:
       - Se dirigir a pasta Subsídios
       - Abrir o projeto subsidios.Rpoj 
       - Na pasta data-raw dentro do subsídios o usuário deve rodar o código do Relatorios.R 
@@ -36,8 +36,8 @@
       - Para rodar APENAS os relatórios do comerciomundo, rodar apenas o código a partir da linha 17 até o final do código na linha 55.
 
  ## Visualização 
-  Depois de seguir os passos indicados anteriormente, o usuário deve se dirigir a pasta data dentro do projeto subsídios;
-  Dentro da pasta data existem duas pastas referentes ao comerciobr e o comerciomundo os quais estão presentes os relatórios de todos os países em suas respectivas pastas 
+   Depois de seguir os passos indicados anteriormente, o usuário deve se dirigir a pasta data dentro do projeto subsídios;
+   Dentro da pasta data existem duas pastas referentes ao comerciobr e o comerciomundo os quais estão presentes os relatórios de todos os países em suas respectivas pastas 
   
  ## Autores
 
