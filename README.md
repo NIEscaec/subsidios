@@ -12,7 +12,9 @@
    *Observação: Lembrar SEMPRE de conferir pelo menos UM relatório para confirmar se todas as funções estão se portanto normalmente.
    
    install.packages("devtools")
+   
    install.packages("stringr")
+   
    install.packages("dplyr")
    
 
