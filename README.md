@@ -12,6 +12,9 @@
    *Observação: Lembrar SEMPRE de conferir pelo menos UM relatório para confirmar se todas as funções estão se portanto normalmente.
    
    install.packages("devtools")
+   install.packages("stringr")
+   install.packages("dplyr")
+   
 
 ## Instalação 
    O projeto Subsídios tem como pré-requisito 3 projetos a parte presentes no github da Secretaria de Comércio e Assuntos Econômicos.
