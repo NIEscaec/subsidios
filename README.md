@@ -12,15 +12,19 @@
    *Observação: Lembrar SEMPRE de conferir pelo menos UM relatório para confirmar se todas as funções estão se portanto normalmente.
    
    install.packages("devtools")
+   
    library(devtools)
    
    install.packages("stringr")
+   
    library(stringr)
    
    install.packages("dplyr")
+   
    library(dplyr)
 
    install.packages("tidyr")
+   
    library(tidyr)
   
 ## Instalação 
