@@ -19,6 +19,10 @@
    
    library(stringr)
    
+   install.packages("stringi")
+   
+   library(stringi)
+   
    install.packages("dplyr")
    
    library(dplyr)
