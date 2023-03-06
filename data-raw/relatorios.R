@@ -1,34 +1,60 @@
+library(barao2)
+library(comerciobr2)
+library(ggplot2)
+
+
 retirar_lista_paises <- c("Não Definido", "Provisão de Navios e Aeronaves", "Bancos Centrais",
                           "A Designar", "Niue", "Cocos (Keeling), Ilhas", "Marianas do Norte, Ilhas",
-                          "Wake, Ilha", "Sint Maarten", "Midway, Ilhas", "Guernsey", 
-                          "Madeira, Ilha da", "Território Britânico do Oceano Índico", 
+                          "Wake, Ilha", "Sint Maarten", "Midway, Ilhas", "Guernsey",
+                          "Madeira, Ilha da", "Território Britânico do Oceano Índico",
                           "São Pedro e Miquelon", "Svalbard e Jan Mayen", "Terras Austrais Francesas",
                           "Geórgia do Sul e Sandwich do Sul, Ilhas", "Heard e ilhas mcdonald, Ilha",
                           "Organizações Internacionais", "Mayotte", "Guam", "São Bartolomeu",
                           "Lebuan, Ilhas", "Bouvet, Ilha", "Brasil", "Antártica", "Madagascar")
 
+
 lista_paises <- unique(comerciobr2::sh1_df$no_pais)
 lista_paises_filtrada <- lista_paises[! lista_paises %in% retirar_lista_paises]
 
+## Gera um relatório único para tal país. É utilizado para verificar mudanças/testes que estão sendo incorporadas...
 
-# barao::relatorio_brasil_pais("China")
+barao2::relatorio_brasil_pais("Butão")
 
-purrr::walk(lista_paises_filtrada, barao2::relatorio_brasil_pais)
-# 
+## Gera todos os países para cada país.
+
+purrr::walk(lista_paises_filtrada, barao2::relatorio_brasil_pais) # mensal e anual
+
+## Em janeiro de cada ano, a seção Anual e Mensal seria a mesma. Portanto, o código abaixo gera os relatórios para todos os países
+### somente para a seção mensal.
+
+purrr::walk(lista_paises_filtrada, barao2::relatorio_brasil_pais_anual) # somente mensal
+
+## O código abaixo é uma tentativa de gerar os relatórios para blocos automaticmaente. Entretatno, está apresentando erros ainda...
+## Como está tendo erros, fazemos isso manualmente no RMD "comerciobr_report_bloco_manual, localizado em barao2 > inst. 
+## OBS: quando for gerar esses relátorios manualmente é necessário trocar os países e os nomes dos títulos.
+## OBS: em janeiro é preciso comentar a parte anual
+
+purrr::walk(paises, barao2::relatorio_brasil_bloco)
+
+
+
+#---------------------------#---------------------------------#---------------------------------------#--------------------------------
+
+#
 # # base de dados comtrade
-# 
+#
 # ## Identificando os nomes dos arquivos do banco de dados COMTRADE
-# 
+#
 # paths_arquivos_filtrados <- list.files("input/Comtrade/arquivos_filtrados", pattern = "*.csv", full.names = FALSE)
-# 
+#
 # # Lendo a base de dados COMTRADE
-# 
+#
 lista_paises_comtrade <- comerciomundo2::dic_comtrade_mdic
 
 # exp_imp_sh2 <- map_df(here("input", "Comtrade", "arquivos_filtrados", paths_arquivos_filtrados), read_csv)
-# 
-# # Lista de países sem dados suficientes no Comtrade  
-# 
+#
+# # Lista de países sem dados suficientes no Comtrade
+#
 retirar_lista_paises_comtrade <- c("Areas, nes", "Chad", "Cuba", "Dem. People's Rep. of Korea", "Dem. Rep. of the Congo",
                                    "Djibouti", "Equatorial Guinea", "Eritrea", "Faeroe Isds", "Free Zones", "Gabon",
                                    "Gibraltar", "Grenada", "Guinea-Bissau",
@@ -47,9 +73,9 @@ retirar_lista_paises_comtrade <- c("Areas, nes", "Chad", "Cuba", "Dem. People's 
                                    "Guadeloupe", "French Guiana", "Fmr Dem. Yemen", "Martinique", "FS Micronesia", "Papua New Guinea",
                                    "Réunion", "Turks and Caicos Isds", "Vanuatu", "Venezuela", "US Virgin Isds")
 
-lista_paises_comtrade_filtrada <- lista_paises_comtrade %>% 
-  dplyr::filter(! text %in% retirar_lista_paises_comtrade) %>% 
-  dplyr::filter(stringr::str_detect(text, ", nes$", negate = T)) %>% 
+lista_paises_comtrade_filtrada <- lista_paises_comtrade %>%
+  dplyr::filter(! text %in% retirar_lista_paises_comtrade) %>%
+  dplyr::filter(stringr::str_detect(text, ", nes$", negate = T)) %>%
   dplyr::pull(text)
 
 purrr::walk(lista_paises_comtrade_filtrada, barao2::relatorio_pais_mundo)
